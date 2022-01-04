@@ -38,12 +38,18 @@
 import Vue from "vue";
 
 export default Vue.extend({
-  name: "HelloWorld",
+  name: "Sidebar",
 
-  data(){
-      return {
-          
-      }
+  data() {
+    return {
+      items: [
+        { title: "Главная", icon: "folder_open" },
+        { title: "Память", icon: "folder_open" },
+        { title: "Мониторы", icon: "folder_open" },
+        { title: "Коммутаторы", icon: "folder_open" },
+        { title: "Аксессуары", icon: "folder_open" },
+      ],
+    };
   },
 });
 </script>
