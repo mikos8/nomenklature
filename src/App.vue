@@ -4,9 +4,13 @@
       <Sidebar />
     </div>
     <div class="main-content">
-      <v-btn @click="addCard()"> add </v-btn>
+      <!-- <v-btn @click="addCard()"> add </v-btn> -->
       <v-btn large @click.stop="showScheduleForm = true">open dialog</v-btn>
-      <Dialog :visible="showScheduleForm" @close="showScheduleForm = false" />
+      <Dialog
+        :value="showScheduleForm"
+        :visible="showScheduleForm"
+        @close="showScheduleForm = false"
+      />
 
       <div class="content">
         <v-card class="card" v-for="item in items" :key="item">1</v-card>
@@ -26,7 +30,7 @@ export default Vue.extend({
   data() {
     return {
       items: 0,
-      showScheduleForm: false,
+      showScheduleForm: true,
     };
   },
   methods: {
