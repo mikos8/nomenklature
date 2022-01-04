@@ -5,7 +5,7 @@
     </div>
     <div class="main-content">
       <v-btn @click="addCard()"> add </v-btn>
-      <v-btn color="accent" large @click.stop="showScheduleForm = true"></v-btn>
+      <v-btn large @click.stop="showScheduleForm = true">open dialog</v-btn>
       <Dialog :visible="showScheduleForm" @close="showScheduleForm = false" />
 
       <div class="content">
