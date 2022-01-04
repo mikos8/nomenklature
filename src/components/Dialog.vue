@@ -9,17 +9,24 @@
 </template>
 
 <script lang="ts">
-import {Emit, Prop, Component, Vue } from "vue-property-decorator";
+import { Emit, Prop, Component, Vue } from "vue-property-decorator";
 
-@Component({
-
-})
+@Component({})
 export default class Dialog extends Vue {
-    @Prop() public value!:Boolean;
+  @Prop() public value!: Boolean;
 
-    get show(){
-        return this.value;
-    }
+  get show() {
+    return this.value;
+  }
+
+  @Emit("close")
+  close() {
+    return false;
+  }
+
+  @Emit("open")
+  open() {
+    return true;
+  }
 }
-
 </script>
