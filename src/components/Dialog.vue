@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="show" max-width="500px">
+  <v-dialog v-model="visible" max-width="500px">
     <v-card>
       <v-card-actions>
         <v-btn color="primary" @click.stop="show = false">Close</v-btn>
